@@ -1,25 +1,24 @@
-import React, { useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-  LayoutAnimation,
-  Platform,
-  UIManager,
-  Modal,
-} from "react-native";
-import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import React, { useState } from "react";
+import {
+  LayoutAnimation,
+  Platform,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  UIManager,
+  View
+} from "react-native";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
+import DateTimePickerModal from "react-native-modal-datetime-picker";
 if (Platform.OS === "android") {
   UIManager.setLayoutAnimationEnabledExperimental &&
     UIManager.setLayoutAnimationEnabledExperimental(true);
 }
-
-import Animated, { useSharedValue, useAnimatedStyle } from "react-native-reanimated";
+//hello
+import Animated, { useAnimatedStyle, useSharedValue } from "react-native-reanimated";
 
 const HomeScreen = () => {
   const [expanded, setExpanded] = useState(false);
