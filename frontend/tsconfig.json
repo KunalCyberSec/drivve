@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
-    "lib": ["esnext"],
+    "module": "node16",
     "jsx": "react-native",
-    "moduleResolution": "node",
-    "allowJs": true,
+    "strict": true,
+    "moduleResolution": "node16",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true
+    "allowImportingTsExtensions": true
   },
   "exclude": [
     "node_modules",
@@ -22,13 +20,13 @@
     "jest.config.js"
   ],
   "include": [
-    "types",        // ✅ include the types folder
-    "screens", 
+    "types",
+    "screens",
     "assets",
     "App.tsx",
     "**/*.ts",
     "**/*.tsx",
     "svg.d.ts"
-  ]
-
+  ],
+  "extends": "expo/tsconfig.base"
 }

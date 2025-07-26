@@ -1,0 +1,14 @@
+{
+    "United States": {
+        "California": ["Los Angeles", "San Diego", "San Francisco"],
+        "Texas": ["Houston", "Dallas", "Austin"]
+    },
+    "India": {
+        "Maharashtra": ["Mumbai", "Pune", "Nagpur"],
+        "Karnataka": ["Bengaluru", "Mysuru", "Hubli"]
+    },
+    "Canada": {
+        "Ontario": ["Toronto", "Ottawa"],
+        "Quebec": ["Montreal", "Quebec City"]
+    }
+}

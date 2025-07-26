@@ -1,0 +1,68 @@
+Drivve App Frontend Requirements and Notes
+
+1. User Profile Creation:
+   - Input fields: First Name, Last Name, Email, Date of Birth, Gender, Country, State, City, Referral Code.
+   - Profile picture selection: Upload from gallery, take photo, or select avatar.
+   - Date of Birth picker with age validation (minimum 18 years).
+   - Gender selection modal with options: Male, Female, Prefer Not to Say.
+   - Country fixed to "India" with local JSON data for states and cities.
+   - State and City selection modals populated from local JSON file (india_states_cities.json).
+   - Validation for required fields and proper formats.
+
+2. Email Verification with OTP:
+   - "Verify" button inside email input field to send OTP.
+   - OTP input field appears after sending OTP.
+   - Submit OTP to verify email.
+   - API endpoints:
+     - POST /emailapi/send-email-otp/
+     - POST /emailapi/verify-email-otp/
+   - Frontend API service updated to call these endpoints.
+   - Validation for email format and OTP length.
+   - UI feedback for OTP sent, verification success, and errors.
+
+3. UI Components and Libraries:
+   - React Native components: TextInput, TouchableOpacity, Modal, FlatList, ScrollView, SafeAreaView.
+   - Expo libraries:
+     - expo-image-picker
+     - expo-linear-gradient
+     - react-native-modal-datetime-picker
+   - React Native Vector Icons:
+     - @expo/vector-icons (Ionicons, MaterialIcons)
+   - DateTimePickerModal for date selection.
+
+4. Known Issues and Recommendations:
+   - iOS devices show "TypeError: property is not configurable" related to FlatList and Hermes engine.
+   - Suggested disabling Hermes engine on iOS for testing.
+   - Defensive copying of arrays before passing to FlatList to avoid rendering issues.
+   - Use unique keys for FlatList items (state or city names).
+
+5. API Base URLs and Backend Integration:
+   - Backend server running at http://localhost:8000.
+   - Ensure backend email verification API is running and accessible.
+   - Frontend app config updated with correct API base URL.
+
+6. Testing:
+   - Test email verification flow on web, iOS, and Android.
+   - Test state and city dropdowns for correct data and no errors.
+   - Monitor console and device logs for warnings or errors.
+
+7. Files Modified:
+   - drivve/frontend/screens/CreateProfile.tsx
+   - drivve/frontend/services/api.ts
+   - drivve/frontend/app.config.js
+
+8. Frontend Libraries to Install:
+   - react-native
+   - react
+   - expo
+   - expo-image-picker
+   - expo-linear-gradient
+   - react-native-modal-datetime-picker
+   - @expo/vector-icons
+   - react-native-safe-area-context
+   - react-native-gesture-handler
+   - react-native-reanimated
+   - react-native-screens
+   - react-navigation (and related packages if used)
+
+Please share this document with your development team for reference and further development.

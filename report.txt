@@ -1,0 +1,72 @@
+Drivve App Basic Documentation
+
+1. Overview
+The Drivve app is a full-stack application consisting of a React Native frontend and a FastAPI backend. The frontend targets iOS, Android, and web platforms using Expo. The backend provides REST API services with database integration.
+
+2. Frontend
+
+- Configuration:
+  - drivve/frontend/app.json: Expo configuration file specifying app name, version, SDK version, platforms (ios, android, web), entry point (index.tsx), and platform-specific settings.
+  - drivve/frontend/tsconfig.json: TypeScript configuration for the frontend.
+  - drivve/frontend/babel.config.js, metro.config.js: Babel and Metro bundler configurations.
+
+- Main Entry:
+  - drivve/frontend/App.tsx: Main React component wrapping the app navigation inside NavigationContainer.
+  - drivve/frontend/index.tsx: Likely the actual entry point as specified in app.json.
+
+- Navigation:
+  - drivve/frontend/navigation/AppNavigator.tsx: Defines the app's navigation structure using react-navigation.
+
+- Screens:
+  - drivve/frontend/screens/: Contains React components for various screens such as:
+    - SplashScreen.tsx
+    - LoginScreen.tsx
+    - CreateProfile.tsx
+    - OtpScreen.tsx
+
+- Services:
+  - drivve/frontend/services/api.ts: Handles API calls to the backend.
+
+- Assets:
+  - drivve/frontend/assets/: Contains images, icons, fonts, and other static resources.
+
+3. Backend
+
+- Configuration:
+  - drivve/backend/config.py: Backend configuration settings.
+  - drivve/backend/requirements.txt: Python dependencies.
+  - drivve/backend/Dockerfile: Docker setup for backend containerization.
+  - drivve/docker-compose.yml: Docker Compose setup for multi-container orchestration.
+
+- Main Application:
+  - drivve/backend/app/main.py: FastAPI app initialization, middleware setup (CORS), route inclusion, and database connection lifecycle management.
+
+- Database:
+  - drivve/backend/app/db.py: Database connection and metadata setup.
+  - drivve/backend/app/models.py: Database models.
+  - drivve/backend/app/schemas.py: Pydantic schemas for data validation.
+
+- API:
+  - drivve/backend/app/api/routes.py: API route definitions.
+
+- Migrations:
+  - drivve/backend/alembic/: Database migration scripts.
+
+4. Project Root
+
+- drivve/package.json and drivve/frontend/package.json: Node.js dependencies for root and frontend respectively.
+- drivve/tsconfig.json: TypeScript configuration for the entire project.
+- drivve/.gitignore: Git ignore rules.
+- drivve/README.md: Project documentation.
+
+5. Summary
+The Drivve app is structured with a clear separation between frontend and backend. The frontend is a React Native app using Expo and react-navigation. The backend is a FastAPI service with database integration and REST API routes. The project uses Docker for containerization and has migration support via Alembic.
+
+6. Recommendations for Further Analysis
+- Review API routes in backend/app/api/routes.py for endpoint details.
+- Explore frontend/navigation/AppNavigator.tsx for navigation flow.
+- Examine frontend/screens for UI/UX components.
+- Check backend/app/models.py and schemas.py for data models and validation.
+- Verify Docker and deployment configurations.
+
+This documentation provides a comprehensive overview of the Drivve app's architecture and key files.
