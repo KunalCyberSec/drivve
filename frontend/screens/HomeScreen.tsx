@@ -17,7 +17,7 @@ if (Platform.OS === "android") {
   UIManager.setLayoutAnimationEnabledExperimental &&
     UIManager.setLayoutAnimationEnabledExperimental(true);
 }
-//hello
+
 import Animated, { useAnimatedStyle, useSharedValue } from "react-native-reanimated";
 
 const HomeScreen = () => {
